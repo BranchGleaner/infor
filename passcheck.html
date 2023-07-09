@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>星核猎手信息控制中心</title>
+    <title>星核猎手信息控制中心——刃</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,10 +49,31 @@
             font-weight: bold;
         }
     </style>
+    <script>
+        // 禁止复制
+        document.addEventListener('copy', function (e) {
+            e.preventDefault();
+        });
+
+        // 禁止打开开发者工具
+        document.onkeydown = function (e) {
+            if (event.keyCode === 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                return false;
+            }
+        };
+
+        // 禁用右键点击
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
 </head>
 <body>
     <div class="login-form">
-        <h1>星核猎手信息控制中心</h1>
+        <h1>星核猎手信息控制中心——刃</h1>
         <form id="loginForm" onsubmit="validatePassword(event)">
             <div class="form-group">
                 <input type="password" id="password" placeholder="请输入密码" required>
